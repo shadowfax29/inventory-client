@@ -54,7 +54,7 @@ catch(err){
           handleBlur,
           handleSubmit
         }) => (
-          <form className="card card-body w-25 m-auto bg-success-subtle" onSubmit={handleSubmit}>
+          <form className="card card-body  m-auto bg-success-subtle" onSubmit={handleSubmit} style={{ maxWidth: '400px', width: '100%' }}>
             {serverError&&(<div><p className='text-danger'>{serverError}</p></div>)}
                   <div className="mb-3">
               <label className="form-label" htmlFor="email">
