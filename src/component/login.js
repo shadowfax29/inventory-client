@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 import { useAuth } from '../context/AuthContext';
 import * as Yup from 'yup';
 import axios from "../config/axios"
-import { useNavigate} from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 
 export default function Login() {
@@ -95,6 +95,7 @@ catch(err){
             <button className='btn btn-success m-3' type="submit" disabled={isSubmitting}>
               Submit
             </button>
+                 <p>Dont have account ?</p><Link to="/register"> login</Link>
           </form>
         )}
       </Formik>
