@@ -55,7 +55,7 @@ export default function Register() {
             handleReset
           } = props;
           return (
-            <form className="card card-body w-25 m-auto bg-success-subtle" onSubmit={handleSubmit}>
+            <form className="card card-body  m-auto bg-success-subtle" onSubmit={handleSubmit} style={{ maxWidth: '400px', width: '100%' }}>
             {serverError&&(<div>{serverError.map((ele,i)=>{
               return <p key={i} className='text-danger'>{ele.msg}</p>
             })}</div>)}
