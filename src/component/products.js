@@ -33,6 +33,7 @@ fetch()
            <th scope="col">Product Name</th>
            <th scope="col">Prize</th>
            <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
            {/* Add more table headings if needed */}
          </tr>
        </thead>
@@ -44,6 +45,7 @@ fetch()
              <td>{ele.productId}</td>
              <td>{ele.prize}</td>
              <td>{ele.quantity}</td>
+                       <td>{ele.total}</td>
              {/* Add more table data cells for additional properties */}
            </tr>
          ))}
