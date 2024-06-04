@@ -177,7 +177,7 @@ return (
       </div>
     </div>
 
-    <form className="card card-body w-25 m-auto bg-success-subtle" onSubmit={handleSubmit}>
+    <form className="card card-body m-auto bg-success-subtle" onSubmit={handleSubmit} style={{ maxWidth: '400px', width: '100%' }}>
       <div className='m-1'>
         <label className="form-label">productId</label>
         <input
