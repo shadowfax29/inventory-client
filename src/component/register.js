@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from "../config/axios"
 import { Link, useNavigate } from 'react-router-dom';
-
+import { toast } from 'alert';
 
 export default function Register() {
   const [serverError,setServerError]=useState(null)
@@ -12,6 +12,8 @@ export default function Register() {
  
       try{
         const res=await axios.post("/api/user/create",values)
+     
+        toast.success('successfully registered')
         setServerError(null)
       navigate("/login")
       }
