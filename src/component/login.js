@@ -95,7 +95,7 @@ catch(err){
             <button className='btn btn-success m-3' type="submit" disabled={isSubmitting}>
               Submit
             </button>
-                 <p>Dont have account ?</p><Link to="/register"> login</Link>
+                 <p>Dont have account ?</p><Link to="/register"> register</Link>
           </form>
         )}
       </Formik>
