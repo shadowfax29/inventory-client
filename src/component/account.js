@@ -5,6 +5,7 @@ import { MdOutlineAddCircleOutline } from "react-icons/md";
 import { FiMinusCircle } from "react-icons/fi";
 import Quagga from 'quagga';
 import axios from "../config/axios"
+import { toast } from 'alert';
 export default function Account() {
   const { logout } = useAuth();
   const user = JSON.parse(localStorage.getItem("detail"));
@@ -61,7 +62,7 @@ if(remove){
           Authorization:localStorage.getItem('token')
         }
       })
-     
+      toast.error('Item Removed')
     }
     catch(err){
       console.log(err)
@@ -134,7 +135,7 @@ const startScan = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   if (!form.productId || !form.name || !form.prize) {
-    return alert('Please fill in all required fields.');
+    return toast.error('fill all the fields')
   }
   try {
     const product = await axios.post("/api/addProduct", form, {
@@ -142,7 +143,7 @@ const handleSubmit = async (e) => {
         Authorization: localStorage.getItem("token")
       }
     })
-    console.log(product.data)
+    toast.success('Item Added')
     setForm({
       name: '',
       productId: '',
